@@ -6,6 +6,7 @@
 - downgrading firebase from 9 version to 8 version, because in the 9 version the setups are very different with tutorials (https://www.npmjs.com/package/firebase) -> i chose 8.10.0 since that is the most stable version in version 8
 - https://www.youtube.com/watch?v=tkvQVt2sX7Y
 - https://www.youtube.com/watch?v=Htt8AKeF1Kw&list=WL&index=7
+- deploying = https://dev.to/jesusrmendez/how-to-deploy-vue-js-firebase-1iic
 
 ### Other References
 
