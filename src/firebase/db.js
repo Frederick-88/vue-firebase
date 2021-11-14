@@ -1,51 +1,32 @@
-import { initializeApp } from "@firebase/app";
-import firebase from "firebase/compat/app";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import firebase from "firebase";
+import "firebase/firestore";
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDtzjuQCr1fmexz0OkHjFqDFFbkWWKOv_c",
-//   authDomain: "vue-firebase-todoapp-3a77a.firebaseapp.com",
-//   projectId: "vue-firebase-todoapp-3a77a",
-//   storageBucket: "vue-firebase-todoapp-3a77a.appspot.com",
-//   messagingSenderId: "20105088140",
-//   appId: "1:20105088140:web:7ee738fd38c0d2bf83bfa9",
-// };
-
-const firebaseApp = initializeApp({
+const firebaseConfig = {
   apiKey: "AIzaSyDtzjuQCr1fmexz0OkHjFqDFFbkWWKOv_c",
   authDomain: "vue-firebase-todoapp-3a77a.firebaseapp.com",
   projectId: "vue-firebase-todoapp-3a77a",
   storageBucket: "vue-firebase-todoapp-3a77a.appspot.com",
   messagingSenderId: "20105088140",
   appId: "1:20105088140:web:7ee738fd38c0d2bf83bfa9",
-});
+};
 
-// const firebaseApp = firebase.initializeApp(firebaseConfig);
-const database = getFirestore();
-// const database = getFirestore(firebaseApp);
-const todolistCollection = collection(database, "todolist");
-const getTodolistDatabase = getDocs(todolistCollection);
+const database = firebase.initializeApp(firebaseConfig).firestore();
+const todolistCollection = database.collection("todolist");
 
 const createTodoList = (todoTask) => {
-  // console.log("create", todo);
-  return addDoc(todolistCollection, {
-    todo: todoTask,
+  todolistCollection.add({
+    task: todoTask,
   });
 };
 
-const updateTodoList = (todoId, todo) => {
-  return todolistCollection.doc(todoId).update(todo);
+const updateTodoList = (todoId, todoTask) => {
+  todolistCollection.doc(todoId).update({
+    task: todoTask,
+  });
 };
 
 const deleteTodoList = (todoId) => {
-  return todolistCollection.doc(todoId).delete();
+  todolistCollection.doc(todoId).delete();
 };
 
-export {
-  database,
-  todolistCollection,
-  getTodolistDatabase,
-  createTodoList,
-  updateTodoList,
-  deleteTodoList,
-};
+export { database, createTodoList, updateTodoList, deleteTodoList };

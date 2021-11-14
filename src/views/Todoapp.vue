@@ -10,12 +10,24 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(todo, index) in todolistDatabase" :key="todo">
-          <th scope="row">{{ index }}</th>
-          <td>{{ todo }}</td>
-          <td class="d-flex">
-            <button type="button" class="btn-outline-warning">Edit</button>
-            <button type="button" class="btn-outline-danger">Delete</button>
+        <tr v-for="(todo, index) in todolistDatabase" :key="todo.task">
+          <th scope="row">{{ index + 1 }}</th>
+          <td>{{ todo.task }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-outline-warning me-3"
+              @click="startEdit(todo)"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              @click="deleteTodo(todo.id)"
+            >
+              Delete
+            </button>
           </td>
         </tr>
       </tbody>
@@ -29,15 +41,32 @@
           class="form-control"
           placeholder="To Do Task"
           v-model="todoInput"
-          @keyup.enter="addTodoList"
+          @keyup.enter="onKeypressEnter"
         />
         <div class="input-group-append">
           <button
+            v-if="!isEditingTodo"
             class="btn btn-outline-success"
             type="button"
-            @click="addTodoList"
+            @click="createTodo"
           >
             Add Todo
+          </button>
+          <button
+            v-if="isEditingTodo"
+            class="btn btn-outline-success"
+            type="button"
+            @click="updateTodo"
+          >
+            Edit Todo
+          </button>
+          <button
+            v-if="isEditingTodo"
+            class="btn btn-dark"
+            type="button"
+            @click="cancelEdit"
+          >
+            Cancel
           </button>
         </div>
       </div>
@@ -46,27 +75,64 @@
 </template>
 
 <script>
-import { getTodolistDatabase, createTodoList } from "../firebase/db";
+import {
+  database,
+  createTodoList,
+  updateTodoList,
+  deleteTodoList,
+} from "../firebase/db";
 
 export default {
   name: "Todoapp",
   data() {
     return {
+      todolistDatabase: [],
       todoInput: "",
+      activeEditTodoId: -1,
     };
   },
   computed: {
-    todolistDatabase() {
-      return getTodolistDatabase;
+    isEditingTodo() {
+      return this.activeEditTodoId !== -1;
     },
   },
   methods: {
-    async addTodoList() {
+    async createTodo() {
       if (!!this.todoInput) {
         await createTodoList(this.todoInput);
-        this.todoInput = "";
+        this.resetForm();
       }
     },
+    async updateTodo() {
+      if (!!this.todoInput) {
+        await updateTodoList(this.activeEditTodoId, this.todoInput);
+        this.resetForm();
+      } else {
+        this.resetForm();
+      }
+    },
+    async deleteTodo(todoId) {
+      await deleteTodoList(todoId);
+    },
+
+    onKeypressEnter() {
+      if (this.isEditingTodo) this.updateTodo();
+      else this.createTodo();
+    },
+    startEdit(todoObj) {
+      this.todoInput = todoObj.task;
+      this.activeEditTodoId = todoObj.id;
+    },
+    cancelEdit() {
+      this.resetForm();
+    },
+    resetForm() {
+      this.todoInput = "";
+      this.activeEditTodoId = -1;
+    },
+  },
+  firestore: {
+    todolistDatabase: database.collection("todolist"),
   },
 };
 </script>
