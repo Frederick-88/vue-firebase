@@ -7,6 +7,8 @@
 - https://www.youtube.com/watch?v=tkvQVt2sX7Y
 - https://www.youtube.com/watch?v=Htt8AKeF1Kw&list=WL&index=7
 - deploying = https://dev.to/jesusrmendez/how-to-deploy-vue-js-firebase-1iic
+- host images research = https://www.google.com/search?q=can+firebase+host+images&oq=can+firebase+host+images&aqs=chrome..69i57j33i22i29i30.4361j0j4&sourceid=chrome&ie=UTF-8
+- Firebase Storage = https://firebase.google.com/docs/storage/
 
 ### Other References
 
