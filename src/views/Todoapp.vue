@@ -1,6 +1,6 @@
 <template>
   <div class="home container">
-    <h2 class="mb-4">Todoapp created with Vue.js & Firebase</h2>
+    <h2 class="mb-4">Todo App</h2>
     <table class="table table-dark">
       <thead>
         <tr>
