@@ -6,6 +6,8 @@
 - Fullstack CRUD of Customer Record System + Image Hosting System
 - Firebase as a Realtime Database
 - Connecting Vue App (as Frontend) with Firebase (as Backend or Server Side and Database-NonSQL)
+- Firebase File Upload & Delete
+- Async Awaits
 
 ### Used References :
 
@@ -15,8 +17,9 @@
 - https://www.youtube.com/watch?v=Htt8AKeF1Kw&list=WL&index=7
 - deploying = https://dev.to/jesusrmendez/how-to-deploy-vue-js-firebase-1iic
 - host images research = https://www.google.com/search?q=can+firebase+host+images&oq=can+firebase+host+images&aqs=chrome..69i57j33i22i29i30.4361j0j4&sourceid=chrome&ie=UTF-8
-- Firebase Storage = https://firebase.google.com/docs/storage/
-- Community Picture Sharing App with Firebase = https://makeschool.org/mediabook/oa/tracks/build-ios-apps/build-a-photo-sharing-app/uploading-photos-to-firebase/
+- Firebase Storage Official Docs = https://firebase.google.com/docs/storage/web/create-reference?hl=id
+- Vue Firebase Image Upload App = https://www.youtube.com/watch?v=TAjlNU7dVXE
+- Reset HTML Input File = https://stackoverflow.com/questions/1703228/how-can-i-clear-an-html-file-input-with-javascript/16222877
 
 ### Other References
 
