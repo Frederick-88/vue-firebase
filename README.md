@@ -1,5 +1,6 @@
 ## Fullstack Vue-Firebase Multiple Apps
 
+### Now Live on Internet, Kindly Visit = https://vue-firebase-todoapp-3a77a.web.app/#/
 ### Features :
 
 - Fullstack CRUD of Todo App
@@ -8,14 +9,15 @@
 - Connecting Vue App (as Frontend) with Firebase (as Backend or Server Side and Database-NonSQL)
 - Firebase File Upload & Delete
 - Async Awaits
+- Vue + Firebase Web Hosting / Live Site
 
 ### Used References :
 
 - https://stackoverflow.com/questions/46636255/firebase-firestore-is-not-a-function-when-trying-to-initialize-cloud-firestore
 - downgrading firebase from 9 version to 8 version, because in the 9 version the setups are very different with tutorials (https://www.npmjs.com/package/firebase) -> i chose 8.10.0 since that is the most stable version in version 8
 - https://www.youtube.com/watch?v=tkvQVt2sX7Y
-- https://www.youtube.com/watch?v=Htt8AKeF1Kw&list=WL&index=7
-- deploying = https://dev.to/jesusrmendez/how-to-deploy-vue-js-firebase-1iic
+- deploying = https://www.youtube.com/watch?v=Htt8AKeF1Kw&list=WL&index=7
+- deploying-2 = https://dev.to/jesusrmendez/how-to-deploy-vue-js-firebase-1iic
 - host images research = https://www.google.com/search?q=can+firebase+host+images&oq=can+firebase+host+images&aqs=chrome..69i57j33i22i29i30.4361j0j4&sourceid=chrome&ie=UTF-8
 - Firebase Storage Official Docs = https://firebase.google.com/docs/storage/web/create-reference?hl=id
 - Vue Firebase Image Upload App = https://www.youtube.com/watch?v=TAjlNU7dVXE
