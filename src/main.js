@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import { firestorePlugin } from "vuefire";
 
-Vue.use(firestorePlugin);
+Vue.use(firestorePlugin); // defined so we can use 'firestore: {}' in a vue component.
 Vue.config.productionTip = false;
 
 new Vue({
