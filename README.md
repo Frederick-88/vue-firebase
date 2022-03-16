@@ -1,6 +1,7 @@
 ## Fullstack Vue-Firebase Multiple Apps
 
-### Now Live on Internet, Kindly Visit = https://vue-firebase-todoapp-3a77a.web.app/#/
+### Now Live on Internet, Kindly Visit = https://fd-vue-firebase.web.app/#/ or https://vue-firebase-todoapp-3a77a.web.app/#/
+
 ### Features :
 
 - Fullstack CRUD of Todo App
@@ -22,6 +23,9 @@
 - Firebase Storage Official Docs = https://firebase.google.com/docs/storage/web/create-reference?hl=id
 - Vue Firebase Image Upload App = https://www.youtube.com/watch?v=TAjlNU7dVXE
 - Reset HTML Input File = https://stackoverflow.com/questions/1703228/how-can-i-clear-an-html-file-input-with-javascript/16222877
+- Firebase changing URL = https://stackoverflow.com/questions/52170023/firebase-hosting-deploy-to-other-site
+- Firebase deploy site to another URL = https://stackoverflow.com/questions/52170023/firebase-hosting-deploy-to-other-site
+- Firebase deploy site to another URL (2) - ( in my case, i just define the target as the name like `firebase target:apply hosting vue-firebase-todoapp-3a77a vue-firebase-todoapp-3a77a` ) = https://firebase.google.com/docs/hosting/multisites
 
 ### Other References
 

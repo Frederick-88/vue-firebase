@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "vue-firebase-todoapp-3a77a"
+  },
+  "targets": {
+    "vue-firebase-todoapp-3a77a": {
+      "hosting": {
+        "fd-vue-firebase": [
+          "fd-vue-firebase"
+        ],
+        "vue-firebase-todoapp-3a77a": [
+          "vue-firebase-todoapp-3a77a"
+        ]
+      }
+    }
   }
 }
