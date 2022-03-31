@@ -26,6 +26,7 @@
 - Firebase changing URL = https://stackoverflow.com/questions/52170023/firebase-hosting-deploy-to-other-site
 - Firebase deploy site to another URL = https://stackoverflow.com/questions/52170023/firebase-hosting-deploy-to-other-site
 - Firebase deploy site to another URL (2) - ( in my case, i just define the target as the name like `firebase target:apply hosting vue-firebase-todoapp-3a77a vue-firebase-todoapp-3a77a` ) = https://firebase.google.com/docs/hosting/multisites
+- firebase spark (free) pricing plan detail = https://firebase.google.com/pricing?authuser=2&hl=en
 
 ### Other References
 
